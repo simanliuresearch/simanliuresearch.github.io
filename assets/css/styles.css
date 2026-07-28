@@ -1694,6 +1694,31 @@ h2 {
   --float-delay: -4.6s;
 }
 
+@media (min-width: 769px) {
+  .orbit-center {
+    --float-x: 5px;
+    --float-y: -8px;
+  }
+
+  .orbit-word:nth-child(3n + 1) {
+    --float-x: 10px;
+    --float-y: -12px;
+    --float-duration: 6.6s;
+  }
+
+  .orbit-word:nth-child(3n + 2) {
+    --float-x: -9px;
+    --float-y: -10px;
+    --float-duration: 5.8s;
+  }
+
+  .orbit-word:nth-child(3n) {
+    --float-x: 8px;
+    --float-y: 11px;
+    --float-duration: 7.1s;
+  }
+}
+
 @keyframes orbit-float {
   0%,
   100% {
