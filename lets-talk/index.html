@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Send a research, collaboration, or project inquiry to Siman Liu."
+    />
+    <title>Let’s Talk | Siman Liu</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/">
+          <span class="brand-name">Siman Liu</span>
+          <span class="brand-mark">Communication Researcher</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          ☰
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation"></nav>
+      </div>
+    </header>
+
+    <main class="talk-main" id="main">
+      <div class="container talk-grid">
+        <div class="talk-copy">
+          <p class="talk-kicker">Dear <em>you</em>,</p>
+          <p class="talk-invite">Let’s connect!</p>
+          <p class="talk-signoff">Best fishes,<br />Siman</p>
+        </div>
+
+        <form
+          class="talk-form"
+          id="email-form"
+          action="mailto:sliu35@albany.edu"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="talk-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="talk-field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="talk-field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required />
+          </div>
+
+          <div class="talk-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button class="talk-submit" type="submit">Open email</button>
+          <p class="talk-note">
+            This opens your email app with the message addressed to
+            <a class="talk-direct" href="mailto:sliu35@albany.edu"
+              >sliu35@albany.edu</a
+            >.
+          </p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
