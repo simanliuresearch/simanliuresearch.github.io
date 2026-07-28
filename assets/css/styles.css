@@ -1655,7 +1655,6 @@ h2 {
   font-style: italic;
   line-height: 0.9;
   text-align: center;
-  animation: orbit-float 7.4s ease-in-out -2.1s infinite;
 }
 
 .orbit-word {
@@ -1668,66 +1667,6 @@ h2 {
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  animation: orbit-float var(--float-duration, 6.8s) ease-in-out
-    var(--float-delay, -1.4s) infinite;
-  will-change: translate;
-}
-
-.orbit-word:nth-child(3n + 1) {
-  --float-x: 3px;
-  --float-y: -5px;
-  --float-duration: 7.6s;
-  --float-delay: -3.2s;
-}
-
-.orbit-word:nth-child(3n + 2) {
-  --float-x: -3px;
-  --float-y: -4px;
-  --float-duration: 6.4s;
-  --float-delay: -1.1s;
-}
-
-.orbit-word:nth-child(3n) {
-  --float-x: 2px;
-  --float-y: 5px;
-  --float-duration: 8.2s;
-  --float-delay: -4.6s;
-}
-
-@media (min-width: 769px) {
-  .orbit-center {
-    --float-x: 5px;
-    --float-y: -8px;
-  }
-
-  .orbit-word:nth-child(3n + 1) {
-    --float-x: 10px;
-    --float-y: -12px;
-    --float-duration: 6.6s;
-  }
-
-  .orbit-word:nth-child(3n + 2) {
-    --float-x: -9px;
-    --float-y: -10px;
-    --float-duration: 5.8s;
-  }
-
-  .orbit-word:nth-child(3n) {
-    --float-x: 8px;
-    --float-y: 11px;
-    --float-duration: 7.1s;
-  }
-}
-
-@keyframes orbit-float {
-  0%,
-  100% {
-    translate: 0 0;
-  }
-
-  50% {
-    translate: var(--float-x, -2px) var(--float-y, -5px);
-  }
 }
 
 .o1 { top: 16%; left: 17%; transform: rotate(-5deg); }
@@ -2441,9 +2380,7 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   .editorial-hero-image,
-  .ticker-track,
-  .orbit-center,
-  .orbit-word {
+  .ticker-track {
     animation: none;
   }
 }
