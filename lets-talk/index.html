@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Send a research, collaboration, or project inquiry to Siman Liu."
+    />
+    <title>Let’s Talk | Siman Liu</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body class="letter-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/">
+          <span class="brand-name">Siman Liu</span>
+          <span class="brand-mark">Research + Visual Storytelling</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          ☰
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation"></nav>
+      </div>
+    </header>
+
+    <main class="letter-main" id="main">
+      <div class="letter-shell">
+        <section class="letter-intro" aria-labelledby="talk-title">
+          <p class="letter-kicker">A note from Albany</p>
+          <h1 id="talk-title">Hello.<br /><em>What’s on your mind?</em></h1>
+          <p class="letter-deck">
+            Research questions, collaborations, visual projects, conference
+            conversations—or simply a thoughtful hello. I would love to hear from you.
+          </p>
+          <div class="letter-direct">
+            <span>Prefer your own email app?</span>
+            <a href="mailto:sliu35@albany.edu">sliu35@albany.edu ↗</a>
+          </div>
+        </section>
+
+        <section class="letter-form-wrap" aria-label="Email form">
+          <p class="form-number">02 / Write your note</p>
+          <form
+            class="letter-form"
+            id="email-form"
+            action="mailto:sliu35@albany.edu"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="letter-form-row">
+              <div class="letter-field">
+                <label for="name">Your name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="How should I address you?"
+                  required
+                />
+              </div>
+              <div class="letter-field">
+                <label for="email">Your email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="letter-field">
+              <label for="subject">What shall we talk about?</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Research, collaboration, photography…"
+                required
+              />
+            </div>
+
+            <div class="letter-field">
+              <label for="message">Your message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Dear Siman,"
+                required
+              ></textarea>
+            </div>
+
+            <div class="letter-form-footer">
+              <button class="letter-submit" type="submit">
+                Prepare email <span aria-hidden="true">↗</span>
+              </button>
+              <p>
+                This prepares your message in your email app. Nothing is stored on this
+                website.
+              </p>
+            </div>
+          </form>
+          <p class="letter-signoff">Looking forward to hearing from you — Siman</p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
