@@ -127,3 +127,34 @@ if (researchOrbit && "IntersectionObserver" in window) {
 
   orbitObserver.observe(researchOrbit);
 }
+
+const portraitFigures = document.querySelectorAll(
+  ".portrait-page .portrait-series-compact figure",
+);
+
+if (portraitFigures.length && "IntersectionObserver" in window) {
+  document.body.classList.add("portrait-reveal-ready");
+
+  portraitFigures.forEach((figure, index) => {
+    figure.style.setProperty(
+      "--portrait-reveal-delay",
+      `${(index % 3) * 90}ms`,
+    );
+  });
+
+  const portraitObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.05,
+      rootMargin: "0px 0px -5% 0px",
+    },
+  );
+
+  portraitFigures.forEach((figure) => portraitObserver.observe(figure));
+}
