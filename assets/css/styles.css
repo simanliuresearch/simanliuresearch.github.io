@@ -3470,7 +3470,8 @@ body.qr-modal-open {
   }
 
   .contact-photo-media img {
-    object-position: 6% center;
+    object-position: left center;
+    transform: translateX(7%) scale(1.15);
   }
 
   .contact-photo-copy .breadcrumb {
