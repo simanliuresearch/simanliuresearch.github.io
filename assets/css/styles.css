@@ -3485,7 +3485,7 @@ body.qr-modal-open {
   }
 
   .contact-photo-media img {
-    object-position: 20% center;
+    object-position: 6% center;
   }
 
   .contact-photo-copy .breadcrumb {
@@ -3501,8 +3501,14 @@ body.qr-modal-open {
   .contact-photo-credit {
     right: 12px;
     bottom: 10px;
-    max-width: calc(100% - 24px);
-    font-size: 0.58rem;
+    max-width: min(56%, 220px);
+    padding: 4px 6px;
+    font-family: var(--serif);
+    font-size: 0.5rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    line-height: 1.25;
     text-align: right;
   }
 
@@ -5175,14 +5181,14 @@ body.qr-modal-open {
   }
 
   .creative-home .closing-frame-credit {
-    right: auto;
+    right: 16px;
     bottom: 16px;
-    left: 16px;
-    max-width: min(62%, 240px);
+    left: auto;
+    max-width: min(72%, 280px);
     padding: 6px 8px;
     font-size: 0.6rem;
     line-height: 1.35;
-    text-align: left;
+    text-align: right;
   }
 }
 
