@@ -158,3 +158,63 @@ if (portraitFigures.length && "IntersectionObserver" in window) {
 
   portraitFigures.forEach((figure) => portraitObserver.observe(figure));
 }
+
+const videoProjects = document.querySelectorAll(".video-page .video-project");
+
+if (videoProjects.length && "IntersectionObserver" in window) {
+  document.body.classList.add("video-reveal-ready");
+
+  videoProjects.forEach((project, index) => {
+    project.style.setProperty("--video-reveal-delay", `${(index % 2) * 70}ms`);
+  });
+
+  const videoObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.05,
+      rootMargin: "0px 0px -5% 0px",
+    },
+  );
+
+  videoProjects.forEach((project) => videoObserver.observe(project));
+}
+
+const qrModal = document.querySelector("#wechat-qr-modal");
+const qrOpenButton = document.querySelector("[data-qr-open]");
+const qrCloseButtons = document.querySelectorAll("[data-qr-close]");
+let qrReturnFocus = null;
+
+const closeQrModal = () => {
+  if (!qrModal || qrModal.hidden) return;
+  qrModal.hidden = true;
+  document.body.classList.remove("qr-modal-open");
+  qrOpenButton?.setAttribute("aria-expanded", "false");
+  qrReturnFocus?.focus();
+};
+
+qrOpenButton?.addEventListener("click", () => {
+  if (!qrModal) return;
+  qrReturnFocus = document.activeElement;
+  qrModal.hidden = false;
+  document.body.classList.add("qr-modal-open");
+  qrOpenButton.setAttribute("aria-expanded", "true");
+  qrModal.querySelector("[data-qr-close]")?.focus();
+});
+
+qrCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeQrModal);
+});
+
+qrModal?.addEventListener("click", (event) => {
+  if (event.target === qrModal) closeQrModal();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeQrModal();
+});
