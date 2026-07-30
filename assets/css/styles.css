@@ -3196,21 +3196,6 @@ h2 {
   display: block;
 }
 
-.contact-page .qr-trigger-hint {
-  position: absolute;
-  right: -4px;
-  bottom: -4px;
-  padding: 4px 6px 3px;
-  background: var(--sun);
-  color: var(--ink);
-  font-size: 0.5rem;
-  font-weight: 850;
-  letter-spacing: 0.09em;
-  line-height: 1;
-  text-transform: uppercase;
-  box-shadow: 2px 2px 0 var(--ink);
-}
-
 .contact-page .qr-trigger:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 6px;
@@ -3457,12 +3442,12 @@ body.qr-modal-open {
   }
 
   .contact-photo-hero {
-    min-height: 360px;
+    min-height: 310px;
   }
 
   .contact-photo-copy {
     width: auto;
-    min-height: 360px;
+    min-height: 310px;
     margin: 0;
     padding: 20px 20px 28px;
     justify-content: flex-start;
