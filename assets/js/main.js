@@ -110,3 +110,20 @@ emailForm?.addEventListener("submit", (event) => {
 document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
+
+const researchOrbit = document.querySelector(".orbit");
+
+if (researchOrbit && "IntersectionObserver" in window) {
+  researchOrbit.classList.add("orbit-enhanced");
+
+  const orbitObserver = new IntersectionObserver(
+    ([entry], observer) => {
+      if (!entry.isIntersecting) return;
+      researchOrbit.classList.add("is-in-view");
+      observer.unobserve(researchOrbit);
+    },
+    { threshold: 0.22 },
+  );
+
+  orbitObserver.observe(researchOrbit);
+}
