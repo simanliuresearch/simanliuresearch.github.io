@@ -4064,7 +4064,8 @@ h2 {
     position: relative;
     display: block;
     width: calc(100% - 12px);
-    height: min(110vw, 430px);
+    height: auto;
+    aspect-ratio: 16 / 9;
     margin: 0 auto;
     overflow: hidden;
     transform: rotate(-0.7deg);
@@ -4076,7 +4077,7 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 64% 43%;
+    object-position: center;
     filter: saturate(0.82) contrast(1.02);
   }
 
@@ -4095,9 +4096,9 @@ h2 {
   .creative-home .mobile-about-portrait .chapter-mark {
     position: absolute;
     z-index: 1;
-    bottom: 20px;
-    left: 18px;
-    padding: 11px 15px 10px;
+    bottom: 14px;
+    left: 14px;
+    padding: 9px 12px 8px;
     align-items: center;
     transform: rotate(-2deg);
     background: var(--sun);
@@ -4106,14 +4107,20 @@ h2 {
   }
 
   .creative-home .mobile-about-portrait .chapter-mark span {
-    width: 34px;
-    height: 34px;
+    width: 31px;
+    height: 31px;
     border-color: var(--ink);
   }
 
   .creative-home .mobile-about-portrait .chapter-mark p {
     margin: 0;
-    font-size: 0.94rem;
+    font-size: 0.86rem;
+  }
+
+  .creative-home .intro-statement .eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.11em;
+    white-space: nowrap;
   }
 
   .creative-home .intro-statement h2 {
@@ -4999,5 +5006,35 @@ h2 {
 @media (max-width: 760px) and (prefers-reduced-motion: reduce) {
   .creative-home .orbit-rings > span {
     animation: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .creative-home .closing-frame,
+  .creative-home .closing-frame-copy {
+    min-height: 88svh;
+  }
+
+  .creative-home .closing-frame-copy {
+    justify-content: flex-start;
+    padding-top: clamp(72px, 12svh, 104px);
+  }
+
+  .creative-home .closing-frame-copy h2 {
+    max-width: 94%;
+    margin: 6px 0 28px;
+    font-size: clamp(3.45rem, 15vw, 4.15rem);
+    line-height: 0.87;
+  }
+
+  .creative-home .closing-frame-credit {
+    right: auto;
+    bottom: 16px;
+    left: 16px;
+    max-width: min(62%, 240px);
+    padding: 6px 8px;
+    font-size: 0.6rem;
+    line-height: 1.35;
+    text-align: left;
   }
 }
