@@ -3366,6 +3366,62 @@ body.qr-modal-open {
   margin-top: 18px;
 }
 
+.paper-page .poster-shell {
+  width: min(1320px, calc(100% - 40px));
+  margin: 0 auto 28px;
+}
+
+.paper-page .poster-panel {
+  scroll-margin-top: 110px;
+  padding: clamp(20px, 2.5vw, 30px);
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.paper-page .poster-panel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.paper-page .poster-panel-head .eyebrow {
+  margin-bottom: 6px;
+}
+
+.paper-page .poster-panel-head h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.paper-page .poster-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.paper-page .poster-scroll {
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: #461969;
+}
+
+.paper-page .poster-scroll a,
+.paper-page .poster-scroll img {
+  display: block;
+}
+
+.paper-page .poster-scroll img {
+  width: 100%;
+  height: auto;
+}
+
+.paper-page .poster-mobile-hint {
+  display: none;
+}
+
 .rip-page .page-hero h1 {
   max-width: none;
   font-size: clamp(2.15rem, 7.6vw, 5.2rem);
@@ -5201,6 +5257,66 @@ body.qr-modal-open {
   .paper-page > main > .section,
   .paper-page main > .section {
     padding-top: 26px;
+  }
+
+  .paper-page .poster-shell {
+    width: calc(100% - 32px);
+    margin-bottom: 24px;
+  }
+
+  .paper-page .poster-panel {
+    scroll-margin-top: 88px;
+    padding: 14px;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .paper-page .poster-panel-head {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .paper-page .poster-panel-head h2 {
+    font-size: 1.9rem;
+  }
+
+  .paper-page .poster-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .paper-page .poster-actions .button {
+    min-width: 0;
+    padding: 12px 8px;
+    font-size: 0.66rem;
+    text-align: center;
+  }
+
+  .paper-page .poster-mobile-hint {
+    display: block;
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .paper-page .poster-scroll {
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--sun) #2a0f3e;
+    scrollbar-width: thin;
+  }
+
+  .paper-page .poster-scroll a {
+    width: max-content;
+    scroll-snap-align: start;
+  }
+
+  .paper-page .poster-scroll img {
+    width: 1120px;
+    max-width: none;
   }
 
 }
