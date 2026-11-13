@@ -27,6 +27,7 @@ if (navigation) {
         <a href="/lens/videos/" ${isCurrent("/lens/videos/") ? 'aria-current="page"' : ""}>Video Projects</a>
       </div>
     </div>
+    <a href="/teaching/" ${isCurrent("/teaching/") ? 'aria-current="page"' : ""}>Teaching</a>
     <a href="/contact/" ${isCurrent("/contact/") ? 'aria-current="page"' : ""}>Contact</a>
     <a class="nav-cta" href="/lets-talk/" ${isCurrent("/lets-talk/") ? 'aria-current="page"' : ""}>Let’s Talk</a>
   `;
